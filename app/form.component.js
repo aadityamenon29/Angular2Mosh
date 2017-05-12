@@ -21,10 +21,13 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             FormComponent = (function () {
                 function FormComponent() {
                 }
+                FormComponent.prototype.log = function (x) {
+                    console.log(x);
+                };
                 FormComponent = __decorate([
                     core_1.Component({
                         selector: 'form',
-                        template: "\n\n\t<form class=\"form-horizontal\">\n\t  <div class=\"form-group\">\n\t    <label class=\"control-label col-sm-2\" for=\"email\">Email:</label>\n\t    <div class=\"col-sm-10\">\n\t      <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Enter email\">\n\t    </div>\n\t  </div>\n\t  <div class=\"form-group\">\n\t    <label class=\"control-label col-sm-2\" for=\"pwd\">Password:</label>\n\t    <div class=\"col-sm-10\"> \n\t      <input type=\"password\" class=\"form-control\" id=\"pwd\" placeholder=\"Enter password\">\n\t    </div>\n\t  </div>\n\t  <div class=\"form-group\"> \n\t    <div class=\"col-sm-offset-2 col-sm-10\">\n\t      <div class=\"checkbox\">\n\t        <label><input type=\"checkbox\"> Remember me</label>\n\t      </div>\n\t    </div>\n\t  </div>\n\t  <div class=\"form-group\"> \n\t    <div class=\"col-sm-offset-2 col-sm-10\">\n\t      <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n\t    </div>\n\t  </div>\n\t</form>\n\n\t"
+                        templateUrl: 'app/form.component.html'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], FormComponent);

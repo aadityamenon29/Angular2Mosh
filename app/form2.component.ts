@@ -2,11 +2,11 @@ import {Component} from 'angular2/core';
 
 @Component(
 {
-	selector: 'form',
-	templateUrl: 'app/form.component.html'	
+	selector: 'form2',
+	templateUrl: 'app/form2.component.html'	
 })
 
-export class FormComponent{
+export class Form2Component{
 	
 	onSubmit(form){
 

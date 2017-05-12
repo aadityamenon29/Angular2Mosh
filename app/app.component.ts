@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 import {ZippyComponent} from './zippy.component';
 import {TweetsService} from './tweets.service'
 import {FormComponent} from './form.component';
-
+import {Form2Component} from './form2.component';
 
 //annotation which adds metadata about the class
 
@@ -16,12 +16,14 @@ import {FormComponent} from './form.component';
     </zippy>
 
     <br><br>
-    <form></form>
+    
+    
+    <form2></form2>
      `,
     //you need to add the following directives 
     //to tell angular which component is responsible for the authors and courses element above
     
-    directives: [ZippyComponent, FormComponent]    
+    directives: [ZippyComponent, FormComponent, Form2Component]    
 })
 export class AppComponent { 
 //to get default values from db/back-end api at the start - from like a service or something

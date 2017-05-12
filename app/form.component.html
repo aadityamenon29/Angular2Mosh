@@ -1,5 +1,12 @@
 <div class = "example" style="width:1500px">
-<form >
+
+<!-- to access each control object,
+pass a reference to the submit method which references the whole control group object containining controls. to do this, 
+#f - a temporary local variable is made and set to
+ngForm. its a special syntax, when angular sees this it sets the variable to the ngControl/ngForm directive applied to the input/form element. 
+it has a form attribute. f.form.
+-->
+<form #f = "ngForm" (ngSubmit) = "onSubmit(f.form)" >
 <div class="form-group" >
 <div class="col-sm-7">
 		<label for="firstName">First Name</label>
@@ -10,10 +17,20 @@
 		class = "form-control" 
 		id="firstName"
 		required 
+		minlength="3" 
 		>
-	<div class = "alert alert-danger"*ngIf="firstName.touched && !firstName.valid">
-	First Name is required
-	</div>
+
+		<div *ngIf="firstName.touched && firstName.errors">
+		<div class = "alert alert-danger"*ngIf="firstName.touched && firstName.errors.minlength">
+		First Name should be minimum length {{firstName.errors.minlength.requiredLength}}.
+		</div>
+		<div 
+		class="alert alert-danger"
+		*ngIf="firstName.touched && firstName.errors.required">
+		First name is required.
+		</div>
+		</div>
+
 </div>
 </div>
 
@@ -30,11 +47,11 @@
 	</textarea>
 	<div *ngIf = "comment.touched && !comment.valid" class = "alert alert-danger">Comment is required!</div>
 	<br>
-	<button class="btn btn-primary" type = "submit">Submit</button>
+	<button class="btn btn-primary" type = "submit"
+	[disabled]="!f.valid"
+	>Submit</button>
 	</div>
 </div>
 
 </form>
 </div>
-<br><br>
-

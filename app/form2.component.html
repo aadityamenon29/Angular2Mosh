@@ -1,0 +1,70 @@
+<div class="Examplee" style="width: 1500px">
+
+<form #f = "ngForm" (ngSubmit) = "onSubmit(f.form)">
+<div class="form-group" >
+<div class="col-sm-7">
+<label for="firstName">First Name</label>
+<input ngControl = "firstName" 
+		#firstName="ngForm"  
+		type="text" 
+		class = "form-control" 
+		id="firstName"
+		required 
+		minlength="3" 
+>
+	<div *ngIf="firstName.touched && firstName.errors">
+	
+	<div class="alert alert-danger"
+	*ngIf="firstName.errors.required">
+	First name is required.
+	</div>
+
+	<div class="alert alert-danger"
+	*ngIf="firstName.errors.minlength">
+	First name should be 3 characters minimum.
+	</div>
+
+	</div>
+
+</div>
+</div>
+
+
+<div class="form-group" >
+<div class="col-sm-7">
+<label for="firstName">Email</label>
+<input ngControl = "email" 
+		#email="ngForm" 
+		type="text" 
+		class = "form-control" 
+		id="email" 
+		required>
+		<div *ngIf="email.touched && email.errors">
+		<div *ngIf="email.errors.required" class = "alert alert-danger">Email is required</div>
+		</div>
+
+	
+</div>
+</div>
+
+
+<div>
+<div class="col-sm-7">
+<label for="firstName">Frequency of emails</label>
+	
+	<select class = "form-control">
+  <option value="volvo">Weekly</option>
+  <option value="saab">Monthly</option>
+  <option value="opel">Yearly</option>
+  
+</select>
+<br>
+	<button class="btn btn-primary" type = "submit"
+			[disabled]="!f.valid"
+			>Submit</button>
+</div>
+</div>
+
+</form>
+
+</div>

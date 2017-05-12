@@ -11,30 +11,30 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var FormComponent;
+    var Form2Component;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            FormComponent = (function () {
-                function FormComponent() {
+            Form2Component = (function () {
+                function Form2Component() {
                 }
-                FormComponent.prototype.onSubmit = function (form) {
+                Form2Component.prototype.onSubmit = function (form) {
                     console.log(form.value);
                 };
-                FormComponent = __decorate([
+                Form2Component = __decorate([
                     core_1.Component({
-                        selector: 'form',
-                        templateUrl: 'app/form.component.html'
+                        selector: 'form2',
+                        templateUrl: 'app/form2.component.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], FormComponent);
-                return FormComponent;
+                ], Form2Component);
+                return Form2Component;
             }());
-            exports_1("FormComponent", FormComponent);
+            exports_1("Form2Component", Form2Component);
         }
     }
 });
-//# sourceMappingURL=form.component.js.map
+//# sourceMappingURL=form2.component.js.map

@@ -1,4 +1,4 @@
-System.register(['angular2/core', './zippy.component', './form.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './zippy.component', './form.component', './form2.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './zippy.component', './form.component'], func
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, zippy_component_1, form_component_1;
+    var core_1, zippy_component_1, form_component_1, form2_component_1;
     var AppComponent;
     return {
         setters:[
@@ -22,6 +22,9 @@ System.register(['angular2/core', './zippy.component', './form.component'], func
             },
             function (form_component_1_1) {
                 form_component_1 = form_component_1_1;
+            },
+            function (form2_component_1_1) {
+                form2_component_1 = form2_component_1_1;
             }],
         execute: function() {
             //annotation which adds metadata about the class
@@ -51,10 +54,10 @@ System.register(['angular2/core', './zippy.component', './form.component'], func
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <zippy title = \"Who can see this?\">\n    <div class = \"body\">\n    Whatsupppppppppppppppppppppppp\n    </div>\n    </zippy>\n\n    <br><br>\n    <form></form>\n     ",
+                        template: "\n    <zippy title = \"Who can see this?\">\n    <div class = \"body\">\n    Whatsupppppppppppppppppppppppp\n    </div>\n    </zippy>\n\n    <br><br>\n    \n    \n    <form2></form2>\n     ",
                         //you need to add the following directives 
                         //to tell angular which component is responsible for the authors and courses element above
-                        directives: [zippy_component_1.ZippyComponent, form_component_1.FormComponent]
+                        directives: [zippy_component_1.ZippyComponent, form_component_1.FormComponent, form2_component_1.Form2Component]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
